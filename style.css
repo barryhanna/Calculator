@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:200,400&display=swap');
+
+:root {
+	--number-button-bg-color: #858789;
+	--operator-button-bg-color: #f29e33;
+	--display-bg-color: #525355;
+	--border-radius: 2px;
+}
+
+* {
+	background-color: var(--display-bg-color);
+	box-sizing: border-box;
+	/* border: 1px solid crimson; */
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	color: #fff;
+	font-family: 'Titillium Web', serif;
+	padding-top: 50px;
+	text-align: center;
+}
+
+.container {
+	border-radius: var(--border-radius);
+	box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.7);
+	margin: 0 auto;
+	padding: 10px;
+	width: 200px;
+}
+
+.buttons {
+	display: flex;
+	width: 100%;
+}
+
+.screen {
+	background-color: silver;
+	border: none;
+	color: rgba(0, 0, 0, 0.7);
+	font-family: inherit;
+	font-size: 1.6rem;
+	font-weight: 400;
+	margin-bottom: 5px;
+	padding: 3px;
+	text-align: right;
+	width: 100%;
+}
+
+h1 {
+	font-weight: 200;
+}
+
+button {
+	border: none;
+	border-radius: var(--border-radius);
+	color: currentColor;
+	cursor: pointer;
+	font-family: inherit;
+	padding: 5px;
+	transform-origin: center;
+	transition: all 0.5s ease;
+	transition-duration: 100ms;
+}
+
+button:hover {
+	transform: scale(1.02);
+	transform: translateY(-4px);
+	box-shadow: 0 0 2px black;
+}
+
+button:active {
+	transform: scale(0.98);
+	transform: translateY(-2px);
+}
+
+button:focus {
+	outline: none;
+}
+
+.numbers {
+	width: 70%;
+}
+
+.operators {
+	display: flex;
+	flex-direction: column;
+	width: 30%;
+}
+
+.operators button {
+	background-color: var(--operator-button-bg-color);
+	margin-bottom: 1px;
+}
+
+.numbers button {
+	background-color: var(--number-button-bg-color);
+	width: 30%;
+}
